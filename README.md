@@ -28,10 +28,6 @@ Built using Python and a modular architecture, the chatbot demonstrates:
 * **Safety & Guardrails**: Handle unsafe or off-topic prompts gracefully  
 * **Ease of Grading**: Make setup and interaction quick and reliable for graders  
 
-<p align="center">
-  <img src="./FIG_Terminal_Workflow.png" alt="Chatbot Workflow Diagram" width="55%" />
-</p>
-
 ---
 
 # 🧠 How It Works  
@@ -58,10 +54,6 @@ Each reply follows a structured flow emphasizing:
 * ✅ **Clear Reasoning** — Step-by-step answers for clarity  
 * ✅ **Simple Local Demo** — Run with a single Python command  
 * ✅ **Rubric-Ready** — Designed to align with IPHS 391 grading (`rubric.md`)  
-
-<p align="center">
-  <img src="./FIG_Terminal_Output.png" alt="Regular Chatbot Output" width="50%" />
-</p>
 
 ---
 
@@ -136,5 +128,6 @@ Thanks to Professors **Jon Chun** for guidance, and to the IPHS 391 cohort for f
 MIT License. See `LICENSE` for details.
 
 ```
+
 
 
