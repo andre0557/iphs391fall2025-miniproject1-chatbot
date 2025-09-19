@@ -1,4 +1,3 @@
-````markdown
 # 🎓 IPHS 391 — Miniproject 1: Persona-Driven Chatbot  
 
 <p align="center">
@@ -137,3 +136,4 @@ Thanks to Professors **Jon Chun** for guidance, and to the IPHS 391 cohort for f
 MIT License. See `LICENSE` for details.
 
 ```
+
