@@ -1,5 +1,3 @@
-Absolutely — here’s the **entire `README.md`** in one block, ready for copy-paste:
-
 ````markdown
 # 🎓 IPHS 391 — Miniproject 1: Persona-Driven Chatbot  
 
@@ -94,11 +92,6 @@ Run the chatbot locally:
 python app.py
 ```
 
-> If `app.py` is a Flask app, you can alternatively use:
->
-> ```bash
-> flask run
-> ```
 
 ---
 
@@ -118,19 +111,10 @@ iphs391fall2025-miniproject1-chatbot/
 
 ---
 
-## 📊 Future Roadmap
-
-* Web-based interface (Streamlit/Flask front-end)
-* Multi-persona support (switchable system prompts)
-* RAG integration for knowledge-grounded answers
-* Lightweight test suite (`pytest`) for prompt regression checks
-* Deployment on Render / Streamlit Cloud for live demos
-
----
 
 ## 🙏 Acknowledgments
 
-Thanks to **Professors Katherine Elkins & Jon Chun** for guidance, and the IPHS 391 cohort for feedback and iteration suggestions.
+Thanks to **Jon Chun** for guidance, and the IPHS 391 cohort for feedback and iteration suggestions.
 
 ---
 
@@ -140,5 +124,3 @@ MIT License. See `LICENSE` for details.
 
 ```
 
-Would you like me to add a small **Mermaid diagram** showing the message flow (User → bot.py → chatbot.py → LLM → Response) right in the README? It would look very polished and help graders understand your architecture at a glance.
-```
