@@ -1,7 +1,7 @@
 # 🎓 IPHS 391 — Miniproject 1: Persona-Driven Chatbot  
 
 <p align="center">
-  <img src="./Dr.Adrian Chatbot.jpg" alt="Persona Chatbot Example Output" width="55%"
+  <img src="./Dr.Adrian Chatbot.jpg" alt="Persona Chatbot Example Output" width="75%"
     style="border: 20px solid #aaa; border-radius: 20px; background-color: #f5f5f5; padding: 4px;" />
 </p>
 
@@ -137,4 +137,5 @@ Thanks to Professor **Jon Chun** for guidance, and to the IPHS 391 cohort for fe
 ## 📄 License
 
 MIT License. See `LICENSE` for details.
+
 
