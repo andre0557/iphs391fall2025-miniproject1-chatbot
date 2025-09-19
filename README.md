@@ -59,7 +59,7 @@ Each reply follows a structured flow emphasizing:
 
 # 🛠️ Installation & Setup  
 
-> ⚠️ Make sure you have **Python 3.10+** installed and (if needed) an API key for your LLM provider.
+> ⚠️ Make sure you have **Python 3.10+** installed and an API key for your LLM provider (OpenAI).
 
 1. **Clone the repository:**
 
@@ -125,6 +125,7 @@ Thanks to Professors **Jon Chun** for guidance, and to the IPHS 391 cohort for f
 MIT License. See `LICENSE` for details.
 
 ```
+
 
 
 
