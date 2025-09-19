@@ -88,9 +88,6 @@ Each reply follows a structured flow emphasizing:
 
    ```
    OPENAI_API_KEY=your_api_key_here
-   MODEL_NAME=gpt-4o-mini
-   TEMPERATURE=0.2
-   MAX_TOKENS=800
    ```
 
 5. **Run the chatbot:**
@@ -128,6 +125,7 @@ Thanks to Professors **Jon Chun** for guidance, and to the IPHS 391 cohort for f
 MIT License. See `LICENSE` for details.
 
 ```
+
 
 
 
