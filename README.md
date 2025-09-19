@@ -1,98 +1,112 @@
 ````markdown
 # 🎓 IPHS 391 — Miniproject 1: Persona-Driven Chatbot  
 
-**Math & Logic Persona Example Output**  
+<p align="center">
+  <img src="./FIG_Terminal_Chatbot.png" alt="Persona Chatbot Example Output" width="55%"
+    style="border: 20px solid #aaa; border-radius: 20px; background-color: #f5f5f5; padding: 4px;" />
+</p>
 
 ---
 
 ## 🚀 Overview  
+
 This project is a **persona-driven chatbot** developed for **Kenyon College IPHS 391 (Fall 2025)**.  
-The goal was to create a **system prompt + chatbot pipeline** that demonstrates:
+It showcases prompt engineering, safety guardrails, and structured reasoning in a lightweight, modular chatbot system that can be run and inspected locally.  
 
-- **Prompt engineering** — Designing a clear, consistent persona  
-- **Guardrails** — Building refusals and safety checks into the bot  
-- **Structured reasoning** — Producing thoughtful, step-by-step responses  
-- **Interactive demo** — Allowing graders and peers to engage with the bot locally  
+Built using Python and a modular architecture, the chatbot demonstrates:
 
-The chatbot is lightweight, modular, and designed for **easy inspection** by instructors and graders.
+* **Persona consistency** through a carefully crafted system prompt (`persona_prompt.txt`)
+* **Safe refusals** for harmful or irrelevant prompts
+* **Clear, step-by-step reasoning** designed for an academic context
+* **Ease of grading & reproducibility** with minimal setup requirements
 
 ---
 
 ## 🎯 Goals  
 
-- **Persona Design:** Showcase a distinctive, well-crafted persona (see `persona_prompt.txt`)  
-- **Reasoning Quality:** Produce clear, step-by-step logical output, avoiding hallucinations  
-- **Safety & Guardrails:** Handle unsafe or irrelevant prompts gracefully  
-- **Ease of Grading:** Simple, reproducible setup for instructors and peers  
+* **Persona Design**: Demonstrate a coherent, distinctive voice  
+* **Reasoning Quality**: Provide step-by-step logical outputs and explanations  
+* **Safety & Guardrails**: Handle unsafe or off-topic prompts gracefully  
+* **Ease of Grading**: Make setup and interaction quick and reliable for graders  
+
+<p align="center">
+  <img src="./FIG_Terminal_Workflow.png" alt="Chatbot Workflow Diagram" width="55%" />
+</p>
 
 ---
 
 ## 🧠 How It Works  
 
-The chatbot runs locally via `app.py` and uses a modular design:
+The chatbot uses a **modular design** with a single entry point and clear separation of concerns:
 
-- **`persona_prompt.txt`** contains the system prompt: identity, voice, rules, and style.  
-- **`chatbot.py`** handles model calls and message formatting.  
-- **`bot.py`** orchestrates I/O flow (routes user input to the core and returns responses).  
-- **`app.py`** is the runnable entry point (console app or local server).  
+* **`persona_prompt.txt`** — Defines the chatbot’s identity, rules, and tone.  
+* **`chatbot.py`** — Core logic for assembling prompts, calling the LLM, and formatting replies.  
+* **`bot.py`** — Orchestrates message flow between the user and the chatbot core.  
+* **`app.py`** — Entry point to run the chatbot (CLI or local server).  
 
-Each response follows a **structured format** emphasizing:
+Each reply follows a structured flow emphasizing:
 
-- **Persona Voice:** Keeps tone and style consistent  
-- **Step-by-Step Reasoning:** Explains outputs clearly for student comprehension  
-- **Refusal Logic:** Rejects harmful, off-topic, or disallowed content  
+* **Persona Voice** — Consistent tone and style  
+* **Reasoning Transparency** — Step-by-step explanations to help users follow the logic  
+* **Guardrails** — Refusal patterns to keep the bot safe and on-topic  
 
 ---
 
 ## 🧪 Features  
 
-✅ **Persona-Driven Prompting** — Coherent identity, tone, and style  
-✅ **Guardrails** — Safe refusals and fallback behaviors  
-✅ **Clear Reasoning** — Step-by-step explanations in plain language  
-✅ **Simple Local Demo** — Run with `python app.py` or `flask run`  
-✅ **Grading Rubric Included** — See `rubric.md` for evaluation criteria  
+* ✅ **Persona-Driven Prompting** — Coherent identity & voice  
+* ✅ **Guardrails & Safety** — Safe refusals & fallback logic  
+* ✅ **Clear Reasoning** — Step-by-step answers for clarity  
+* ✅ **Simple Local Demo** — Run with a single Python command  
+* ✅ **Rubric-Ready** — Designed to align with IPHS 391 grading (`rubric.md`)  
+
+<p align="center">
+  <img src="./FIG_Terminal_Output.png" alt="Regular Chatbot Output" width="50%" />
+</p>
 
 ---
 
 ## 🛠️ Installation & Setup  
 
-Clone the repository:  
-```bash
-git clone https://github.com/andre0557/iphs391fall2025-miniproject1-chatbot
-cd iphs391fall2025-miniproject1-chatbot
+> ⚠️ Make sure you have **Python 3.10+** installed and (if needed) an API key for your LLM provider.
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/andre0557/iphs391fall2025-miniproject1-chatbot
+   cd iphs391fall2025-miniproject1-chatbot
 ````
 
-Set up a virtual environment:
+2. **Set up a virtual environment:**
 
-```bash
-python3 -m venv venv
-source venv/bin/activate      # Windows: venv\Scripts\activate
-```
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate      # Windows: venv\Scripts\activate
+   ```
 
-Install dependencies:
+3. **Install dependencies:**
 
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt
-```
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
 
-Configure API credentials (if using OpenAI or other LLM provider):
-Create a `.env` file in the project root:
+4. **Configure API credentials (if required):**
 
-```
-OPENAI_API_KEY=your_api_key_here
-MODEL_NAME=gpt-4o-mini
-TEMPERATURE=0.2
-MAX_TOKENS=800
-```
+   Create a `.env` file in the project root with:
 
-Run the chatbot locally:
+   ```
+   OPENAI_API_KEY=your_api_key_here
+   MODEL_NAME=gpt-4o-mini
+   TEMPERATURE=0.2
+   MAX_TOKENS=800
+   ```
 
-```bash
-python app.py
-```
+5. **Run the chatbot:**
 
-
+   ```bash
+   python app.py
+   ```
 ---
 
 ## 📦 Project Structure
@@ -100,7 +114,7 @@ python app.py
 ```
 iphs391fall2025-miniproject1-chatbot/
 │
-├── app.py               # Entry point (console or web app)
+├── app.py               # Entry point for local run
 ├── bot.py               # Orchestration & I/O routing
 ├── chatbot.py           # Core chatbot logic and model interface
 ├── persona_prompt.txt   # Persona prompt with identity & rules
@@ -114,7 +128,7 @@ iphs391fall2025-miniproject1-chatbot/
 
 ## 🙏 Acknowledgments
 
-Thanks to **Jon Chun** for guidance, and the IPHS 391 cohort for feedback and iteration suggestions.
+Thanks to Professors **Jon Chun** for guidance, and to the IPHS 391 cohort for feedback and iteration suggestions.
 
 ---
 
@@ -123,4 +137,3 @@ Thanks to **Jon Chun** for guidance, and the IPHS 391 cohort for feedback and it
 MIT License. See `LICENSE` for details.
 
 ```
-
