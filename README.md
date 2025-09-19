@@ -121,6 +121,12 @@ Each reply follows a structured flow emphasizing:
     └── README.md            # Project overview (this file)
 
 ---
+## 📖 User Manual
+
+Looking to get the most out of **Dr. Adrian**?  
+Read the full [User Manual](./USER_MANUAL.md) for tips on asking effective questions, understanding the chatbot’s persona, and using it as a learning companion.
+
+---
 
 ## 🙏 Acknowledgments
 
@@ -131,3 +137,4 @@ Thanks to Professor **Jon Chun** for guidance, and to the IPHS 391 cohort for fe
 ## 📄 License
 
 MIT License. See `LICENSE` for details.
+
