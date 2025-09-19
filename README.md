@@ -7,7 +7,7 @@
 
 ---
 
-## 🚀 Overview  
+# 🚀 Overview  
 
 This project is a **persona-driven chatbot** developed for **Kenyon College IPHS 391 (Fall 2025)**.  
 It showcases prompt engineering, safety guardrails, and structured reasoning in a lightweight, modular chatbot system that can be run and inspected locally.  
@@ -21,7 +21,7 @@ Built using Python and a modular architecture, the chatbot demonstrates:
 
 ---
 
-## 🎯 Goals  
+# 🎯 Goals  
 
 * **Persona Design**: Demonstrate a coherent, distinctive voice  
 * **Reasoning Quality**: Provide step-by-step logical outputs and explanations  
@@ -34,7 +34,7 @@ Built using Python and a modular architecture, the chatbot demonstrates:
 
 ---
 
-## 🧠 How It Works  
+# 🧠 How It Works  
 
 The chatbot uses a **modular design** with a single entry point and clear separation of concerns:
 
@@ -51,7 +51,7 @@ Each reply follows a structured flow emphasizing:
 
 ---
 
-## 🧪 Features  
+# 🧪 Features  
 
 * ✅ **Persona-Driven Prompting** — Coherent identity & voice  
 * ✅ **Guardrails & Safety** — Safe refusals & fallback logic  
@@ -65,7 +65,7 @@ Each reply follows a structured flow emphasizing:
 
 ---
 
-## 🛠️ Installation & Setup  
+# 🛠️ Installation & Setup  
 
 > ⚠️ Make sure you have **Python 3.10+** installed and (if needed) an API key for your LLM provider.
 
@@ -136,4 +136,5 @@ Thanks to Professors **Jon Chun** for guidance, and to the IPHS 391 cohort for f
 MIT License. See `LICENSE` for details.
 
 ```
+
 
