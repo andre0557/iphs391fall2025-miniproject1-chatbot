@@ -21,6 +21,26 @@ Built using Python and a modular architecture, the chatbot demonstrates:
 
 ---
 
+# 👤 Persona Introduction: Dr. Adrian Kaleidos  
+
+Meet **Dr. Adrian Kaleidos**, the heart of this project.  
+Dr. Adrian is designed as a polymathic mentor — blending the curiosity of a teacher, the rigor of a scientist, and the warmth of a guide.  
+
+**Backstory & Philosophy:**  
+- **Education:** B.A. Applied Mathematics & CS (Cambridge), Ph.D. in Complex Systems (MIT Media Lab)  
+- **Career:** Postdoc at CERN (particle interaction modeling), researcher at DeepMind (physics-inspired ML), now independent mentor  
+- **Teaching Style:** Socratic — guiding learners with probing questions rather than simply giving answers  
+- **Philosophy:** *"No single field has a monopoly on truth — the best insights come at the crossroads."*  
+
+**Strengths & Flaws (for realism):**  
+- ✅ Excellent at connecting ideas across disciplines  
+- ✅ Encourages step-by-step reasoning and structured problem solving  
+- ⚠️ Sometimes overexplains or makes leaps between concepts — but self-corrects quickly  
+
+This persona is carefully crafted in `persona_prompt.txt` and drives the chatbot's tone, reasoning style, and interaction patterns.  
+
+---
+
 # 🎯 Goals  
 
 * **Persona Design**: Demonstrate a coherent, distinctive voice  
@@ -63,65 +83,51 @@ Each reply follows a structured flow emphasizing:
 
 1. **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/andre0557/iphs391fall2025-miniproject1-chatbot
-   cd iphs391fall2025-miniproject1-chatbot
-````
+       git clone https://github.com/andre0557/iphs391fall2025-miniproject1-chatbot
+       cd iphs391fall2025-miniproject1-chatbot
 
 2. **Set up a virtual environment:**
 
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate      # Windows: venv\Scripts\activate
-   ```
+       python3 -m venv venv
+       source venv/bin/activate      # Windows: venv\Scripts\activate
 
 3. **Install dependencies:**
 
-   ```bash
-   pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
+       pip install --upgrade pip
+       pip install -r requirements.txt
 
-4. **Configure API credentials (if required):**
+4. **Configure API credentials:**
 
    Create a `.env` file in the project root with:
 
-   ```
-   OPENAI_API_KEY=your_api_key_here
-   ```
+       OPENAI_API_KEY=your_api_key_here
 
 5. **Run the chatbot:**
 
-   ```bash
-   python app.py
-   ```
+       python app.py
+
 ---
 
 ## 📦 Project Structure
 
-```
-iphs391fall2025-miniproject1-chatbot/
-│
-├── app.py               # Entry point for local run
-├── bot.py               # Orchestration & I/O routing
-├── chatbot.py           # Core chatbot logic and model interface
-├── persona_prompt.txt   # Persona prompt with identity & rules
-├── rubric.md            # Course grading rubric
-├── requirements.txt     # Python dependencies
-└── README.md            # Project overview (this file)
-```
+    iphs391fall2025-miniproject1-chatbot/
+    │
+    ├── app.py               # Entry point for local run
+    ├── bot.py               # Orchestration & I/O routing
+    ├── chatbot.py           # Core chatbot logic and model interface
+    ├── persona_prompt.txt   # Persona prompt with identity & rules
+    ├── rubric.md            # Course grading rubric
+    ├── requirements.txt     # Python dependencies
+    └── README.md            # Project overview (this file)
 
 ---
 
-
 ## 🙏 Acknowledgments
 
-Thanks to Professors **Jon Chun** for guidance, and to the IPHS 391 cohort for feedback and iteration suggestions.
+Thanks to Professor **Jon Chun** for guidance, and to the IPHS 391 cohort for feedback and iteration suggestions.
 
 ---
 
 ## 📄 License
 
 MIT License. See `LICENSE` for details.
-
-```
