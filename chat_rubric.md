@@ -1,10 +1,10 @@
 ````markdown
-# 📊 Persona Evaluation Rubric
+📊 Persona Evaluation Rubric
 
-## Overview
+Overview:
 This rubric evaluates persona prompt quality using a **weighted linear model**.
 
-```math
+Math:
 Total Score = Σ (wᵢ × fᵢ)
 ````
 
