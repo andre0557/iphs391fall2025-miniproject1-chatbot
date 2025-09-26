@@ -1,60 +1,112 @@
-# 📝 MP1 Persona Prompt Scoring Rubric  
-**Final • Anti-Inflation Version**
+````markdown
+# 📊 Persona Evaluation Rubric
+
+## Overview
+This rubric evaluates persona prompt quality using a **weighted linear model**.
+
+```math
+Total Score = Σ (wᵢ × fᵢ)
+````
+
+Where:
+
+* `fᵢ` = factor score (0–100)
+* `wᵢ` = factor weight (sums to 1.0)
+
+### Must-Pass Rules
+
+* **Consistency** and **Safety** must score ≥ 60, or the persona is “Not Ready.”
+* If any factor = 50–59, maximum overall score is capped at **89%** (“Adequacy Ceiling”).
 
 ---
 
-## 📊 How to Score
+## Factors & Weights
 
-- **Step 1:** Score each criterion **1–5** using the anchors below.  
-- **Step 2:** Compute **weighted total** (max = 100 points).  
-- **Step 3:** Apply **Must-Pass** and **Anti-Inflation** rules (see below).  
+| Factor           | Weight | Definition                                                               |
+| ---------------- | ------ | ------------------------------------------------------------------------ |
+| **Consistency**  | 0.25   | Stability of persona traits, tone, and role across dialogue.             |
+| **Depth**        | 0.20   | Richness of explanations, domain accuracy, and contextualization.        |
+| **Authenticity** | 0.20   | Believability of persona as a unique character with quirks and opinions. |
+| **Creativity**   | 0.15   | Novelty and imagination in framing content and examples.                 |
+| **Engagement**   | 0.10   | Ability to invite user participation, clarify, and sustain dialogue.     |
+| **Safety**       | 0.10   | Evidence of ethical awareness, guardrails, and policy alignment.         |
 
----
-
-## 🧩 Core Criteria (Product)
-
-| # | Criterion | Weight | Critical? | 1 – Poor (Observable Evidence) | 3 – Adequate (Observable Evidence) | 5 – Excellent (Observable Evidence) |
-|---|-----------|--------|-----------|--------------------------------|------------------------------------|------------------------------------|
-| **1** | **Persona Coherence & Authenticity**<br>(depth, voice, role, originality) | **20%** |  | Generic/indistinct; backstory absent; voice drifts; role unclear | Distinct traits + workable backstory appear in outputs; voice mostly steady; role recognizable | Rich backstory, quirks, values; vivid, consistent voice in varied contexts; role unmistakable; creative concept executed cleanly |
-| **2** | **Rules, Constraints & Policy Alignment** | **15%** | ✅ | Rules missing/contradictory; no policy/safety cues; no conflict handling | Clear rules for common cases; basic “do/don’t”; some gaps in edge cases or precedence | Unambiguous, prioritized rules with do/don’t lists, policy-aware refusals, and explicit conflict/edge-case handling |
-| **3** | **Faithfulness & Constraint Adherence** | **20%** | ✅ | Persona facts/rules frequently contradicted; visible drift | Mostly faithful; minor lapses under stress or odd inputs | Near-perfect adherence: rules & persona hold even under adversarial/off-domain inputs |
-| **4** | **Effectiveness for Intended Use**<br>(domain or creative role) | **15%** | ✅ | Persona harms usefulness (irrelevant, inaccurate, derailing) | Generally supports the intended role; outputs mostly relevant and correct | Clearly enhances intended use — correctness for expert roles or immersive, on-brief roleplay |
-| **5** | **Knowledge Limits & Uncertainty Handling** | **10%** | ✅ | Overconfident; invents facts; no fallback | Sometimes admits uncertainty or asks clarifying questions | Consistently refuses or admits ignorance when appropriate; asks targeted clarifiers; avoids speculation |
-| **6** | **Safety, Fairness, Inclusivity & Ethical Awareness** | **10%** | ✅ | No guardrails; unsafe/bias-prone outputs likely | Some safety/fairness guidance; gaps remain | Strong refusal patterns, inclusive tone, bias mitigation, culturally sensitive phrasing; clear off-limits behaviors |
-| **7** | **Adaptability, Robustness & Scalability** | **5%** |  | Breaks character under unusual or adversarial inputs | Holds for typical inputs; some failure at edges | Robust under diverse/adversarial inputs; persona + safety preserved across variations |
-| **8** | **Format Specification, Examples & Efficiency** | **5%** |  | No output schema or examples; verbose or redundant | Some examples or format guidance; moderate clarity and efficiency | Clear schema/template; few-shot examples lock structure; concise and minimal redundancy |
+**Total = 1.00**
 
 ---
 
-## ✅ Must-Pass & Anti-Inflation Rules
+## Behavioral Indicators
 
-- **Critical Criteria:** #2, #3, #4, #5, #6 → each must score **≥ 3** or the prompt is **Not Ready**.  
-- **Style Cap Rule:** Criterion #1 cannot be scored **5** unless the **average of all critical criteria ≥ 4.0**.  
-- **Adequacy Ceiling:** If any critical criterion = 3, maximum overall grade = **89%**.  
-- **Double-Rater Rule:** Criterion #1 must be scored by two graders → use average or consensus.  
-- **Evidence Requirement:** For every critical criterion scored < 4, graders must quote or reference specific lines that justify the score.
+### 1. Consistency (0.25)
+
+* Persona facts and role remain intact.
+* Voice/tone does not drift into generic chatbot style.
+* **Example:** *“I’m here to help you tackle problems at the intersection of mathematics, physics, and computer science.”*
+
+### 2. Depth (0.20)
+
+* Explanations are structured and multi-layered.
+* Uses appropriate domain knowledge (e.g., Monte Carlo, differential equations).
+* **Example:** *“Monte Carlo methods… used for probabilistic assessments and risk analysis.”*
+
+### 3. Authenticity (0.20)
+
+* Persona shows quirks or personal preferences.
+* Sounds human-like rather than mechanical.
+* **Example:** *“Ah, choosing a favorite application of applied math is like selecting a favorite child!”*
+
+### 4. Creativity (0.15)
+
+* Introduces vivid analogies or original framing.
+* Avoids overly generic exposition.
+* **Example:** Using a **quarter-circle visualization** to explain π estimation.
+
+### 5. Engagement (0.10)
+
+* Asks clarifying questions.
+* Suggests next steps or options.
+* **Example:** *“Would you like to proceed with the Monte Carlo simulation… or review the logic first?”*
+
+### 6. Safety (0.10)
+
+* Avoids unsafe, biased, or policy-violating outputs.
+* Shows inclusive and ethical phrasing.
+* **Example:** Tone is supportive and neutral, avoids overpromising.
 
 ---
 
-## 🧪 Process Rubric — Reflection & Testing (Bonus)
+## Scoring Guidelines
 
-| Component | Requirement | Bonus |
-|----------|-------------|-------|
-| **Iteration & Testing** | At least 2 versions of the prompt, with documented rationale + test cases (including edge/adversarial inputs) | Required for full credit |
-| **Reflection** | 1–2 page write-up describing what changed, why, what worked/failed, and what could be improved with more time | +5 pts (bonus) |
+| Score Range | Interpretation                                                                |
+| ----------- | ----------------------------------------------------------------------------- |
+| **90–100**  | Exemplary: production-quality persona, robust across factors.                 |
+| **75–89**   | Strong: effective but minor refinements needed.                               |
+| **60–74**   | Adequate: functional but shallow, inconsistent, or weak on engagement/safety. |
+| **<60**     | Not Ready: fails must-pass (Consistency or Safety <60) or shows major flaws.  |
+
+---
+
+## Example Calculation
+
+```text
+Factor Scores:
+- Consistency: 92 → 0.25 × 92 = 23.0
+- Depth: 88 → 0.20 × 88 = 17.6
+- Authenticity: 95 → 0.20 × 95 = 19.0
+- Creativity: 85 → 0.15 × 85 = 12.8
+- Engagement: 90 → 0.10 × 90 = 9.0
+- Safety: 80 → 0.10 × 80 = 8.0
+
+Final Weighted Score = 23.0 + 17.6 + 19.0 + 12.8 + 9.0 + 8.0 = 89.4
+Result → **Strong (Adequacy Ceiling applied)**
+```
 
 ---
 
-## 📈 Scoring & Grade Bands
+## Usage Notes
 
-1. Compute weighted total from core criteria (max 100).  
-2. Ensure all critical criteria ≥ 3 and anti-inflation rules are applied.  
-
-| Score | Grade Band | Interpretation |
-|------|------------|---------------|
-| **90–100** | **Exemplary** | Production-quality prompt |
-| **75–89** | **Good** | Ready with minor edits |
-| **60–74** | **Adequate** | Requires moderate revision |
-| **< 60 or any critical criterion < 3** | **Not Ready** | Major revision required |
-
----
+1. Score **each factor independently** (0–100).
+2. Apply **weights and must-pass rules** before finalizing score.
+3. Cite **examples from dialogue** as evidence.
+4. Works for both **academic grading** and **self-assessment**.
+```
