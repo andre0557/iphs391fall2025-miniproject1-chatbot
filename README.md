@@ -10,14 +10,14 @@
 # 🚀 Overview  
 
 This project is a **persona-driven chatbot** developed for **Kenyon College IPHS 391 (Fall 2025)**.  
-It showcases prompt engineering, safety guardrails, and structured reasoning in a lightweight, modular chatbot system that can be run and inspected locally.  
+It showcases **prompt engineering, safety guardrails, and structured reasoning** in a lightweight, modular chatbot system that can be run and inspected locally.  
 
 Built using Python and a modular architecture, the chatbot demonstrates:
 
-* **Persona consistency** through a carefully crafted system prompt (`persona_prompt.txt`)
-* **Safe refusals** for harmful or irrelevant prompts
-* **Clear, step-by-step reasoning** designed for an academic context
-* **Ease of grading & reproducibility** with minimal setup requirements
+* **Persona consistency** through a carefully crafted system prompt (`persona_prompt.txt`)  
+* **Safe refusals** for harmful or irrelevant prompts  
+* **Clear, step-by-step reasoning** designed for an academic context  
+* **Ease of grading & reproducibility** with minimal setup requirements  
 
 ---
 
@@ -50,20 +50,40 @@ This persona is carefully crafted in `persona_prompt.txt` and drives the chatbot
 
 ---
 
-# 🧠 How It Works  
+# 🧠 Methodology  
 
-The chatbot uses a **modular design** with a single entry point and clear separation of concerns:
+The chatbot was designed through **iterative prompt engineering**, including:  
 
-* **`persona_prompt.txt`** — Defines the chatbot’s identity, rules, and tone.  
-* **`chatbot.py`** — Core logic for assembling prompts, calling the LLM, and formatting replies.  
-* **`bot.py`** — Orchestrates message flow between the user and the chatbot core.  
-* **`app.py`** — Entry point to run the chatbot (CLI or local server).  
+- **System Prompt Iteration** — refining persona drafts  
+- **Meta-Prompting / Self-Reflection** — evaluator persona (“Dr. Lexi”) critiqued versions  
+- **Prompt Chaining** — structured, step-by-step outputs  
+- **Few-Shot Examples** — modeling the target response style  
+- **Constraint Tightening** — ensuring safety and consistency  
+- **Goal Alignment** — keeping responses focused on academic mentorship  
+- **Comparative Evaluation** — benchmarking across versions  
 
-Each reply follows a structured flow emphasizing:
+---
 
-* **Persona Voice** — Consistent tone and style  
-* **Reasoning Transparency** — Step-by-step explanations to help users follow the logic  
-* **Guardrails** — Refusal patterns to keep the bot safe and on-topic  
+# 📊 Results & Evaluation  
+
+The chatbot was scored using a custom rubric with six metrics:  
+
+| Metric       | Purpose |
+|--------------|------------------------------------------------|
+| Consistency  | Maintains role, tone, and traits across dialogue |
+| Depth        | Provides detailed and thorough explanations |
+| Authenticity | Appears human-like and believable |
+| Creativity   | Introduces novelty and interdisciplinary insight |
+| Engagement   | Keeps users interested and involved |
+| Safety       | Responds responsibly to sensitive inputs |
+
+**Overall Score:** **91.2 / 100** (GPT-5 evaluation)  
+
+**Key Findings:**  
+- ✅ Strong persona consistency and mentor-like tone  
+- ✅ Engaging in academic-style conversations  
+- ⚠️ Could benefit from clearer formatting for equations/graphs  
+- ⚠️ Persona voice could use more humor and metaphors  
 
 ---
 
@@ -73,7 +93,7 @@ Each reply follows a structured flow emphasizing:
 * ✅ **Guardrails & Safety** — Safe refusals & fallback logic  
 * ✅ **Clear Reasoning** — Step-by-step answers for clarity  
 * ✅ **Simple Local Demo** — Run with a single Python command  
-* ✅ **Rubric-Ready** — Designed to align with IPHS 391 grading (`rubric.md`)  
+* ✅ **Rubric-Ready** — Designed to align with IPHS 391 grading (`chat_rubric.md`)  
 
 ---
 
@@ -108,34 +128,40 @@ Each reply follows a structured flow emphasizing:
 
 ---
 
-## 📦 Project Structure
+# 📦 Project Structure  
 
     iphs391fall2025-miniproject1-chatbot/
     │
-    ├── app.py               # Entry point for local run
-    ├── bot.py               # Orchestration & I/O routing
-    ├── chatbot.py           # Core chatbot logic and model interface
-    ├── persona_prompt.txt   # Persona prompt with identity & rules
-    ├── rubric.md            # Course grading rubric
-    ├── requirements.txt     # Python dependencies
-    └── README.md            # Project overview (this file)
+    ├── app.py                  # CLI entry point
+    ├── bot.py                  # Message orchestration
+    ├── chatbot.py              # Core chatbot logic
+    ├── persona_prompt.txt      # Persona definition
+    ├── chat_rubric.md          # Evaluation rubric
+    ├── chat_rubric_history.md  # Rubric revisions
+    ├── chat_history.md         # Logged conversations
+    ├── mp1_chatbot_report.md   # Full project report
+    ├── USER_MANUAL.md          # User manual
+    ├── metaprompt_history.txt  # Notes from meta-prompting
+    ├── Dr.Adrian Chatbot.jpg   # Persona illustration
+    ├── requirements.txt        # Dependencies
+    ├── LICENSE                 # MIT License
+    └── README.md               # Project overview (this file)
 
 ---
-## 📖 User Manual
+
+# 📖 User Manual  
 
 Looking to get the most out of **Dr. Adrian**?  
 Read the full [User Manual](./USER_MANUAL.md) for tips on asking effective questions, understanding the chatbot’s persona, and using it as a learning companion.
 
 ---
 
-## 🙏 Acknowledgments
+# 🙏 Acknowledgments  
 
 Thanks to Professor **Jon Chun** for guidance, and to the IPHS 391 cohort for feedback and iteration suggestions.
 
 ---
 
-## 📄 License
+# 📄 License  
 
 MIT License. See `LICENSE` for details.
-
-
